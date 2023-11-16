@@ -19,7 +19,8 @@ class DataBaseAccess extends PDO
 
     private function __construct()
     {
-        $this->DBPASS = file_get_contents(dirname(__DIR__).'/DBpass.secret');
+        $path = dirname(__DIR__).'DBpass.secret';
+        $this->DBPASS = is_readable($path) ? file_get_contents($path) : '';
 
         $DataSourceName = 'mysql:dbname=' . self::DBNAME . ';host=' . self::DBHOST;
 
