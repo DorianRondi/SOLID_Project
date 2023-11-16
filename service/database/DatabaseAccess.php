@@ -14,12 +14,12 @@ class DataBaseAccess extends PDO
     private string $DBPASS;
 
     private const DBHOST = 'localhost';
-    private const DBNAME = 'DonkeyStay';
+    private const DBNAME = 'SOLID';
     private const DBUSER = 'root';
 
     private function __construct()
     {
-        $this->DBPASS = file_get_contents(dirname(__DIR__).'/core/Alpha/ignored/DBpass.secret');
+        $this->DBPASS = file_get_contents(dirname(__DIR__).'/DBpass.secret');
 
         $DataSourceName = 'mysql:dbname=' . self::DBNAME . ';host=' . self::DBHOST;
 
