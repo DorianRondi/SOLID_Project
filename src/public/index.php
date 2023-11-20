@@ -28,4 +28,3 @@ if(class_exists($fqcn)){
     // Gérer l'erreur : Contrôleur non trouvé
     echo "Contrôleur $controllerName non trouvé.";
 }
-qmsljfkqsmdjfldf
