@@ -12,9 +12,8 @@ class Router
         array_shift($params);
         $controllerFQCN = $this->determineControllerFQCN($params);
         $controller = new $controllerFQCN;
-        $action = isset($params[1]) ? array_shift($params) : 'index';
-        var_dump($params);
-        var_dump($action);
+        $action = isset($params[0]) ? $params[1] : 'index';
+        array_splice($params, 0, 2); var_dump($params);
         if(!method_exists($controller, $action)){
             http_response_code(404);
             echo "Erreur 404 - La page n'existe pas";

@@ -10,3 +10,16 @@ class AuthorController
         echo "Ca a bien affiché";
     }
 }
+
+//fqcn : App\Controller\Author
+
+/*
+ * ce qu'on fait classiquement :
+ *
+ * $authorController = new Controller avec un use App\Controller\Author
+ *
+ * dans le routeur, on n'utilise pas de use
+ *
+ * $authorController = new App\Controller\Author;
+ *
+ */
