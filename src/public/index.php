@@ -6,4 +6,5 @@ use App\Controller\AuthorController;
 use App\Service\Router\Router;
 
 new AuthorController();
-(new Router())();
+$router = new Router();
+$router->start();
